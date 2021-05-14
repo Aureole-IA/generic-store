@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="title">
+{{title}}
+<button (click)="addItem(title)">Add name</button>
+
+<input type="text" [(ngModel)]="power" >
+{{power| exponential}}}
+
+<div *ngIf="items.length === 0">
+  la lista esta vacia
+</div>
+<ul>
+  <li *ngFor="let name of items, index as i">
+    {{name}} <button (click)="deleteItem(i)">Delete</button> 
+  </li>
+</ul>
