@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, products } from 'src/app/interfaces/product';
-
+import { Product } from 'src/app/interfaces/product';
+import { ProductsService } from 'src/app/core/services/products/products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
-  myProducts  : Product[] = products;
+  myProducts  : Product[];
   today= new Date()
-  constructor() { }
+  constructor(private productServices: ProductsService) { }
 
   ngOnInit(): void {
+    this.myProducts = this.productServices.getAllProducts(); 
   }
   public productClicked(id: number){
     console.log("app padre", id)
