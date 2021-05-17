@@ -1,4 +1,5 @@
 @import '~swiper/swiper-bundle';
+@import '../node_modules/flexboxgrid/dist/flexboxgrid.min.css';
 body{
     margin: 0;
     padding: 0;
@@ -7,3 +8,5 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // nos hará breakpoints cada 300px
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

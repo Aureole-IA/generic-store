@@ -5,4 +5,5 @@
     <p>{{product.description | slice: 0 : 10}}</p>
     <p>{{today | date: 'medium'}}</p>
     <button (click)="AddCart()">Add to car</button>
-    <button [routerLink]="['/product',product.id]" routerLinkActive="router-link-active" >View deatils</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button [routerLink]="['/products',product.id]" routerLinkActive="router-link-active" >View deatils</button>

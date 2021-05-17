@@ -8,7 +8,7 @@ import { ProductsService } from 'src/app/core/services/products/products.service
 })
 export class ProductsComponent implements OnInit {
   myProducts  : Product[];
-  today= new Date()
+  today = new Date()
   constructor(private productServices: ProductsService) { }
 
   ngOnInit(): void {
