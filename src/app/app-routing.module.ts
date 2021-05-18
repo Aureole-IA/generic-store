@@ -34,11 +34,16 @@ const routes: Routes = [
         path: 'dev',
         component: DevComponent,
       },
-      {
-        path: '**',
-        component: PageNotFoundComponent,
-      },
+      
     ],
+  },
+  {
+    path: 'admin',
+    loadChildren: ()=> import('./admin/admin.module').then(m=>m.AdminModule)
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 

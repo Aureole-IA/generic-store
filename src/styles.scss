@@ -4,9 +4,27 @@ body{
     margin: 0;
     padding: 0;
 }
-.products {
+.products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // nos hará breakpoints cada 300px
+    grid-gap: 50px 20px;
   }
+// .container{
+//   width: 100%;
+//   padding-right: 0px;
+//   padding-left: 0px;
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+.width{
+  width: 100vw;
+}
+@media (min-width: 576px) {
+  .container{
+    max-width: 1005px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
