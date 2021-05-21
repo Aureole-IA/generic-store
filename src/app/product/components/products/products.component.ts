@@ -12,10 +12,17 @@ export class ProductsComponent implements OnInit {
   constructor(private productServices: ProductsService) { }
 
   ngOnInit(): void {
-    this.myProducts = this.productServices.getAllProducts(); 
+    this.fetchProducts();
   }
   public productClicked(id: number){
     console.log("app padre", id)
+  }
+
+  private fetchProducts(){
+    this.productServices.getAllProducts().subscribe((products)=>{
+      this.myProducts = products
+      console.log(products)
+    })
   }
 
 
