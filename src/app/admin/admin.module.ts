@@ -8,11 +8,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { TableComponent } from './components/table/table.component';
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
 import { MaterialModule } from '../material/material.module';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, ProductDashboardComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, ProductDashboardComponent, ProductListComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
