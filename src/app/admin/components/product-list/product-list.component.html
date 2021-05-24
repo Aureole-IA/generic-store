@@ -1,4 +1,12 @@
 <div class="table-div">
+  <mat-toolbar>
+    <span>Products List</span>
+    <span class="example-spacer"></span>
+    <button routerLink="./create" routerLinkActive="router-link-active"  mat-raised-button color="primary" >
+      New Product
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar>
   <mat-table [dataSource]="products" class="mat-elevation-z8">
     <!-- Position Column -->
     <ng-container matColumnDef="id">
@@ -20,7 +28,7 @@
     <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
         <mat-cell *matCellDef="let product"> 
-            <button mat-stroked-button color="primary">View</button>
+            <button mat-stroked-button color="primary">Update</button>
             <button mat-stroked-button (click)="deleteProduct(product.id)" color="accent">Delete</button>
         </mat-cell>
     </ng-container>

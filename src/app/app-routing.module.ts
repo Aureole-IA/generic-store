@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './admin.guard';
+import { LoginComponent } from './auth/components/login/login.component';
+import { RegisterComponent } from './auth/components/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DevComponent } from './components/dev/dev.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -37,14 +39,21 @@ const routes: Routes = [
       
     ],
   },
+  
   {
     path: 'admin',
     loadChildren: ()=> import('./admin/admin.module').then(m=>m.AdminModule)
   },
   {
+    path:'auth',
+    loadChildren: () => import('./auth/auth.module').then(m=>m.AuthModule)
+
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
-  },
+  }
+  
 ];
 
 @NgModule({

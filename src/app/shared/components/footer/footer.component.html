@@ -1,5 +1,5 @@
 <div class="row row-container">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-4">
         <h3>STORE </h3>
         <h4>Create with</h4>
         <ul>
@@ -10,7 +10,7 @@
             <li>Swiper </li>
         </ul>
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-4">
         <h3>About</h3>
         
         <ul>
@@ -32,4 +32,10 @@
             </li>
         </ul>
     </div>
+    <div class="col-xs-12 col-md-4">
+        <input [formControl]="emailField" type="email" name="email" id="">
+        
+        {{emailField.valid}}, {{emailField.invalid}}
+    </div>
 </div>
+    

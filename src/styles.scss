@@ -19,12 +19,24 @@ body{
 .width{
   width: 100vw;
 }
+.full-width{
+  width: 100%;
+}
+.myRow{
+  margin-left: 0;
+  margin-right: 0;
+  height: 100vh;  
+}
 @media (min-width: 576px) {
   .container{
     max-width: 1005px;
     padding-left: 25px;
     padding-right: 25px;
   }
+}
+.table-div{
+  width: 96%;
+  margin: 2%;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
