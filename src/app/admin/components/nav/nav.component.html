@@ -6,9 +6,8 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a routerLink="./" routerLinkActive="router-link-active" mat-list-item href="#">Dashboard</a>
-      <a routerLink="./create" routerLinkActive="router-link-active"  mat-list-item href="#">New Product</a>
-      <a routerLink="./productTable" routerLinkActive="router-link-active" mat-list-item href="#">inventari</a>
       <a routerLink="./products" routerLinkActive="router-link-active" mat-list-item href="#">Products list</a>
+      <button mat-list-item (click)="logOut()" > LogOut</button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

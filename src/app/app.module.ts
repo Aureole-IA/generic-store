@@ -14,6 +14,8 @@ import { ProductModule } from './product/product.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { AngularFireModule } from '@angular/fire';
+import {environment} from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { AuthModule } from './auth/auth.module';
     ProductModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

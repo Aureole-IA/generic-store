@@ -1,9 +1,17 @@
-<div *ngIf="product">
-    
-    <img src={{product.image}} alt="">
-    <div>
-        <h4>{{product.title}}</h4>
-        <h3>{{product.price|currency}}</h3>
-        <p>{{product.description}}</p>
+<div *ngIf="product" class="row">
+    <div class="col-xs-12 col-md-6">
+        <div class="row full-heigth center-xs middle-xs">
+            <div class="col-xs-12">
+                <h1>{{product.title}}</h1>
+                <h3>{{product.price|currency}}</h3>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+        
     </div>
+    <div class="col-xs-12 col-md-6">
+        <img class="full-width" src={{product.image}} alt="">
+    </div>
+    
 </div>
+

@@ -13,7 +13,8 @@ const targetPath = isProduction
 const environmentFileContent = `
 export const environment = {
    production: ${isProduction},
-   API_URL: "${process.env.API_URL}"
+   API_URL: "${process.env.API_URL}",
+   firebase: ${process.env.FIREBASE_CONF}
 };
 `;
 // write the content to the respective file

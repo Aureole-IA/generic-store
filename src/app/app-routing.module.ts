@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './admin.guard';
-import { LoginComponent } from './auth/components/login/login.component';
-import { RegisterComponent } from './auth/components/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DevComponent } from './components/dev/dev.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -28,8 +26,11 @@ const routes: Routes = [
         loadChildren: () => import('./product/product.module').then(m=> m.ProductModule) ,
       },
       {
+        path:'order',
+        loadChildren: ()=> import('./order/order.module').then(m=>m.OrderModule)
+      },
+      {
         path: 'contact',
-        canActivate: [AdminGuard],
         component: ContactComponent
       },
       {
@@ -42,6 +43,7 @@ const routes: Routes = [
   
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: ()=> import('./admin/admin.module').then(m=>m.AdminModule)
   },
   {

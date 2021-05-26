@@ -15,6 +15,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatStepperModule} from '@angular/material/stepper';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -33,7 +36,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatPaginatorModule,
     MatSortModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule,
+    MatStepperModule
   ],
   exports:[
     MatButtonModule,
@@ -50,7 +55,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatPaginatorModule,
     MatSortModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule,
+    MatStepperModule
   ]
 
 })

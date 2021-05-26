@@ -1,0 +1,60 @@
+<div class="table-div">
+    <mat-horizontal-stepper linear #stepper>
+        <mat-step>
+            <ng-template matStepLabel>Your cart</ng-template>
+            <div *ngIf="(products$|async) as products">
+                
+                <h1 *ngIf="products.length === 0">Without Products</h1>
+                <div class="container" *ngFor="let product of products">
+                    <mat-card>
+                        <mat-card-header>
+                          <div mat-card-avatar >
+                            <img mat-list-icon [src]="product.image" alt="">
+                          </div>
+                          <mat-card-title>{{product.title}}</mat-card-title>
+                          <mat-card-subtitle>{{product.price|currency}}</mat-card-subtitle>
+                          <mat-card-subtitle>{{product.cantidad}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p>
+                                        {{product.description}}
+                                    </p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button (click)="deleteProduct(product.id)" mat-button color="warn">
+                                        Delete
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                      </mat-card>
+                      <mat-divider></mat-divider>
+                </div>
+            </div>
+            
+        </mat-step>
+        <mat-step>
+            <form action="">
+                <ng-template matStepLabel>Your Data</ng-template>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Pay Method</ng-template>
+            <div class="row">
+                <div class="col-xs-12">
+
+                </div>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+    
+</div>
+
